@@ -1,13 +1,11 @@
-# First stage
-FROM pspdev/pspsdk
+ARG BASE_DOCKER_IMAGE
+
+FROM $BASE_DOCKER_IMAGE
 
 COPY . /src
 
-RUN apk add build-base autoconf automake bash bison cmake curl-dev doxygen \
-            flex git gpgme-dev libarchive-dev libtool libusb-compat-dev \
-            openssl-dev patch python3 readline-dev sdl-dev subversion tcl \
-            texinfo wget zlib-dev
-RUN cd /src && ./pspdev.sh 3 4 5 6 7
+RUN apk add build-base git bash patch wget zlib-dev ucl-dev
+RUN cd /src && ./build-extra.sh
 
 # Second stage of Dockerfile
 FROM alpine:latest
