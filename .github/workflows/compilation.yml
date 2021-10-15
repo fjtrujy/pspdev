@@ -46,7 +46,6 @@ jobs:
     #     shell: msys2 {0}
 
     - name: Runs all the stages in the shell
-      continue-on-error: true
       run: |
         export PSPDEV=$PWD/pspdev
         export PATH=$PATH:$PSPDEV/bin
