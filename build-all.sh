@@ -1,8 +1,8 @@
 #!/bin/bash
 # toolchain.sh by fjtrujy
 
-## Enter the ps2dev directory.
-cd "$(dirname "$0")" || { echo "ERROR: Could not enter the ps2dev directory."; exit 1; }
+## Enter the pspdev directory.
+cd "$(dirname "$0")" || { echo "ERROR: Could not enter the pspdev directory."; exit 1; }
 
 ## Create the build directory.
 mkdir -p build || { echo "ERROR: Could not create the build directory."; exit 1; }
@@ -16,7 +16,7 @@ DEPEND_SCRIPTS=($(ls ../depends/*.sh | sort))
 ## Run all the depend scripts.
 for SCRIPT in ${DEPEND_SCRIPTS[@]}; do "$SCRIPT" || { echo "$SCRIPT: Failed."; exit 1; } done
 
-## Check if repo is in a tag, to install this specfic PS2 Dev environment
+## Check if repo is in a tag, to install this specfic PSP Dev environment
 if git describe --exact-match --tags $(git log -n1 --pretty='%h') >/dev/null 2>&1; then
   TAG=$(git describe --exact-match --tags $(git log -n1 --pretty='%h'))
   if [ "$TAG" = "latest" ]; then
