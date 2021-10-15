@@ -48,7 +48,7 @@ jobs:
     - name: Runs all the stages in the shell
       continue-on-error: true
       run: |
-        export PSPDEV=/usr/local/pspdev
+        export PSPDEV=$PWD/pspdev
         export PATH=$PATH:$PSPDEV/bin
         ./build-all.sh
 
