@@ -12,4 +12,4 @@ else
 fi
 
 ## Compile and install.
-./libraries.sh
+make || { exit 1; }
