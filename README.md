@@ -12,7 +12,7 @@ These scripts download (`git clone`) and install:
 
 -   [psptoolchain](https://github.com/pspdev/psptoolchain "psptoolchain")
 -   [pspsdk](https://github.com/pspdev/pspsdk "pspsdk")
--   [psp-pkgconfig](https://github.com/pspdev/psp-pkgconfig "psp-pkgconfig")
+-   [psp-pkgconf](https://github.com/pspdev/psp-pkgconf "psp-pkgconf")
 -   [psp-packages](https://github.com/pspdev/psp-packages "psp-packages")
 -   [psplinkusb](https://github.com/pspdev/psplinkusb "psplinkusb")
 -   [ebootsigner](https://github.com/pspdev/ebootsigner "ebootsigner")
