@@ -24,14 +24,14 @@ jobs:
       if: matrix.os[0] == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get -y install texinfo bison flex gettext libgmp3-dev libmpfr-dev libmpc-dev libusb-dev libreadline-dev
+        sudo apt-get -y install texinfo bison flex gettext libgmp3-dev libmpfr-dev libmpc-dev libusb-dev libreadline-dev libarchive-dev
         echo "MSYSTEM=x64" >> $GITHUB_ENV
 
     - name: Install Mac texinfo bison flex ucl
       if: matrix.os[0] == 'macOS-latest'
       run: |
         brew update
-        brew install gettext texinfo bison flex gnu-sed ncurses gsl gmp mpfr autoconf automake cmake libusb-compat
+        brew install gettext texinfo bison flex gnu-sed ncurses gsl gmp mpfr autoconf automake cmake libusb-compat libarchive gpgme bash openssl libtool
         echo "MSYSTEM=x64" >> $GITHUB_ENV
 
     # - name: Install MSYS2 texinfo bison flex
@@ -48,6 +48,8 @@ jobs:
     - name: Runs all the stages in the shell
       run: |
         export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+        export PATH="/usr/local/opt/libtool/libexec/gnubin:$PATH"
+        export PKG_CONFIG_PATH="/usr/local/opt/libarchive/lib/pkgconfig:/usr/local/opt/openssl@3/lib/pkgconfig"
         export PSPDEV=$PWD/pspdev
         export PATH=$PATH:$PSPDEV/bin
         ./build-all.sh
