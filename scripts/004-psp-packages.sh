@@ -12,4 +12,4 @@ else
 fi
 
 # Install all packages
-./install-latest.sh  fjtrujy/psp-packages  || { exit 1; }
+./install-latest.sh  "fjtrujy/psp-packages"  || { exit 1; }

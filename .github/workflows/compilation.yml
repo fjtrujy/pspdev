@@ -24,7 +24,7 @@ jobs:
       if: matrix.os[0] == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get -y install texinfo bison flex gettext libgmp3-dev libmpfr-dev libmpc-dev libusb-dev libreadline-dev libarchive-dev
+        sudo apt-get -y install texinfo bison flex gettext libgmp3-dev libmpfr-dev libmpc-dev libusb-dev libreadline-dev libcurl4 libcurl4-openssl-dev libssl-dev libarchive-dev libgpgme-dev
         echo "MSYSTEM=x64" >> $GITHUB_ENV
 
     - name: Install Mac texinfo bison flex ucl
