@@ -12,14 +12,14 @@ These scripts download (`git clone`) and install:
 
 -   [psptoolchain](https://github.com/pspdev/psptoolchain "psptoolchain")
 -   [pspsdk](https://github.com/pspdev/pspsdk "pspsdk")
--   [psp-pkgconf](https://github.com/pspdev/psp-pkgconf "psp-pkgconf")
+-   [psp-tools](https://github.com/pspdev/psp-tools "psp-tools")
 -   [psp-packages](https://github.com/pspdev/psp-packages "psp-packages")
 -   [psplinkusb](https://github.com/pspdev/psplinkusb "psplinkusb")
 -   [ebootsigner](https://github.com/pspdev/ebootsigner "ebootsigner")
 
 ## Requirements
 
-1.  Install gcc/clang, make, cmake, patch, git, texinfo, flex, bison, gettext, wget, gsl, gmp, mpfr, mpc, libusb, readline if you don't have those.
+1.  Install gcc/clang, make, cmake, patch, git, texinfo, flex, bison, gettext, wget, gsl, gmp, mpfr, mpc, libusb, readline, libarchive, gpgme, bash, openssl and libtool if you don't have those.
 
 2.  _Optional._ If you are upgrading from the previous version of the PSPDEV environment, it is highly recommended to remove the content of the PSPDEV folder before upgrade. This is a necessary step after the major toolchain upgrade.
 ```bash
